@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Rb-wg-uRK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="secrt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFX-sh-VeN">
+                                <rect key="frame" x="137" y="311" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hPK-vX-DNE"/>
+                                    <constraint firstAttribute="width" constant="100" id="jZx-5Q-BYV"/>
+                                </constraints>
+                                <state key="normal" title="authinticate"/>
+                                <connections>
+                                    <action selector="authinticateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hTB-Sm-MpV"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K9J-5o-Cs8">
+                                <rect key="frame" x="16" y="108" width="350" height="235"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K9J-5o-Cs8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3EU-wb-Kuv"/>
+                            <constraint firstItem="pFX-sh-VeN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3WA-JM-LoP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K9J-5o-Cs8" secondAttribute="bottom" constant="324" id="9Qi-Ta-9jy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K9J-5o-Cs8" secondAttribute="trailing" constant="-7" id="BPJ-yn-Hez"/>
+                            <constraint firstItem="pFX-sh-VeN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TYd-ml-CZU"/>
+                            <constraint firstItem="K9J-5o-Cs8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="iva-Bv-8ig"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QuO-fr-Jjd"/>
+                    <connections>
+                        <outlet property="secret" destination="K9J-5o-Cs8" id="hob-1X-SBo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839.20000000000005" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ebg-GH-24r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Rb-wg-uRK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CQt-Zd-Ygx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Sh1-qk-QWC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvs-qc-LAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>

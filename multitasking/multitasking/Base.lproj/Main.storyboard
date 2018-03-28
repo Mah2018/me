@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rix-yT-DJG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="multitasking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7a-xh-Dgj">
+                                <rect key="frame" x="16" y="104" width="343" height="563"/>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-ot-jrx">
+                                <rect key="frame" x="5" y="69" width="365" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DSO-ft-8FR"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o7a-xh-Dgj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Kol-65-xhY"/>
+                            <constraint firstItem="o7a-xh-Dgj" firstAttribute="top" secondItem="7kg-ot-jrx" secondAttribute="bottom" constant="5" id="Ks7-dS-AcW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o7a-xh-Dgj" secondAttribute="bottom" id="YER-OS-glK"/>
+                            <constraint firstItem="7kg-ot-jrx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="Zpn-Pc-5py"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o7a-xh-Dgj" secondAttribute="trailing" id="jkh-1j-cdD"/>
+                            <constraint firstItem="o7a-xh-Dgj" firstAttribute="top" secondItem="7kg-ot-jrx" secondAttribute="bottom" constant="5" id="mEB-G0-h1H"/>
+                            <constraint firstAttribute="trailing" secondItem="7kg-ot-jrx" secondAttribute="trailing" constant="5" id="wIp-tJ-kLc"/>
+                            <constraint firstItem="7kg-ot-jrx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="wKO-Gb-xJA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Roj-zr-t84"/>
+                    <connections>
+                        <outlet property="addressBar" destination="7kg-ot-jrx" id="5g1-Pa-t37"/>
+                        <outlet property="stackView" destination="o7a-xh-Dgj" id="80j-Cn-NyB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="21T-PC-oDZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rix-yT-DJG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N5Y-eF-yNW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hau-vH-EfD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4oc-CY-QPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="776.76161919040487"/>
+        </scene>
+    </scenes>
+</document>
